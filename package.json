@@ -1,0 +1,14 @@
+{
+  "name": "hooq-relay",
+  "version": "0.0.1",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "hooq",
+  "license": "MIT",
+  "dependencies": {
+    "config": "^1.16.0"
+  }
+}
