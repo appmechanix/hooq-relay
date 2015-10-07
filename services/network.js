@@ -5,12 +5,12 @@ var url = require('url');
 exports.get = function(endpoint, callback) {
 	var options = {
 		host: config.host,
-		path: url.resolve('/api/relay/', endpoint),
+		path: url.resolve('/api/', endpoint),
 		headers: {
 			'X-APIKey': config.apikey
 		}
 	};
-
+	
 	http.request(options, function(response) {
 		var str = '';
 
@@ -21,7 +21,7 @@ exports.get = function(endpoint, callback) {
 
 		//the whole response has been recieved, so we just print it out here
 		response.on('end', function() {
-			console.log(str);
+			callback(null, JSON.parse(str));
 		});
 	}).end();
 };

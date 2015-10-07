@@ -9,6 +9,7 @@
   "author": "hooq",
   "license": "MIT",
   "dependencies": {
+    "async": "^1.4.2",
     "config": "^1.16.0"
   }
 }
